@@ -10,6 +10,8 @@ public class HelloEveryone {
         System.out.println(helloEveryone);
 
         System.out.println("dev上第二次提交，并合并到master");
+
+        System.out.println("正在处理紧急问题。。。处理完成，合并到master");
     }
 
     public HelloEveryone() {
