@@ -8,6 +8,8 @@ public class HelloEveryone {
         helloEveryone.setId("111");
         helloEveryone.setName("wangxiaoer");
         System.out.println(helloEveryone);
+
+        System.out.println("dev上第二次提交，并合并到master");
     }
 
     public HelloEveryone() {
