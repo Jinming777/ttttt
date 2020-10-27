@@ -23,6 +23,8 @@ public class HelloEveryone {
 
         System.out.println("mygit库dev分支跟新，提交到远程库dev，等待ttttt库模拟冲突操作。。。");
 
+        System.out.println("mygit库dev分支跟新，提交到远程库dev，等待ttttt库模拟冲突操作。。。");
+
     }
 
     public HelloEveryone() {
