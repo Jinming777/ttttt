@@ -4,15 +4,12 @@ public class HelloEveryone {
 
     public static void main(String[] args) {
         System.out.println("hi");
-
+        HelloEveryone helloEveryone = new HelloEveryone();
+        helloEveryone.setId("111");
+        helloEveryone.setName("wangxiaoer");
     }
 
-    @Override
-    public String toString() {
-        return "HelloEveryone{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+    public HelloEveryone() {
     }
 
     public String getId() {
