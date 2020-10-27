@@ -17,6 +17,8 @@ public class HelloEveryone {
 
         System.out.println("切回dev分支，删除hotfix分支，合并master分支到dev分支，并取回stansh部分代码，开发完剩余工作后提交，并合并到master");
 
+        System.out.println("在ttttt库基于origin/dev创建dev分支，并修改代码提交，并合并到master");
+
         System.out.println("master分支直接pull拉取远程库代码，dev先不pull尝试直接修改提交引起冲突。。。");
 
     }
