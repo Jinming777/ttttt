@@ -21,6 +21,8 @@ public class HelloEveryone {
 
         System.out.println("master分支直接pull拉取远程库代码，dev先不pull尝试直接修改提交引起冲突。。。");
 
+        System.out.println("mygit库dev分支跟新，提交到远程库dev，等待ttttt库模拟冲突操作。。。");
+
     }
 
     public HelloEveryone() {
