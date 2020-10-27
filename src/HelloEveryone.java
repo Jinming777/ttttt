@@ -7,6 +7,7 @@ public class HelloEveryone {
         HelloEveryone helloEveryone = new HelloEveryone();
         helloEveryone.setId("111");
         helloEveryone.setName("wangxiaoer");
+        System.out.println(helloEveryone);
     }
 
     public HelloEveryone() {
@@ -31,5 +32,13 @@ public class HelloEveryone {
     public HelloEveryone(String id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "HelloEveryone{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
