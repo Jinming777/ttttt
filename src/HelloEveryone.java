@@ -27,6 +27,8 @@ public class HelloEveryone {
 
         System.out.println("ttttt库dev先修改commit后再pull造成冲突。。");
 
+        System.out.println("mygit库新创建类TestGit,HelloEveryone修改内容,一并提交");
+
     }
 
     public HelloEveryone() {
