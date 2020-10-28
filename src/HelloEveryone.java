@@ -29,6 +29,8 @@ public class HelloEveryone {
 
         System.out.println("mygit库新创建类TestGit,HelloEveryone修改内容,一并提交");
 
+        System.out.println("ttttt库对HelloEveryone的更改先保存到stash，pull下来mygit库的修改再unstash");
+
     }
 
     public HelloEveryone() {
