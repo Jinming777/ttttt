@@ -7,5 +7,7 @@ public class TestGit {
         System.out.println("mygit库基于master创建新的临时分支hotfix，修改TestGit后commit并合并到master");
 
         System.out.println("mygit库继续保持dev和master不一致，修改TestGit提交，并合并到master");
+
+        System.out.println("在家里dev分支修改，并提交到远程dev");
     }
 }
