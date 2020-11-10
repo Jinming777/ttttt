@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -35,11 +36,11 @@ public class LambdaTest {
         Stream 流是 Java 8 中引入的重要概念， 把真正的函数式编程风格引入到Java中
          */
         //可以通过 Stream.of() 很容易地将一组元素转化成为流，参数可以是一组用逗号分隔的对象，也可 以是一个集合对象，也可以是数组
-        Stream stream = Stream.of(list);
+//        Stream stream = Stream.of();
         //每个集合都可以通过调用 stream() 方法来产生一个流
-        Stream stream1 = list.stream();
+//        Stream stream1 = list.stream();
         //Rondom 类对象可以产生随机数流
-        Stream stream3 = new Random(20).ints().boxed();
+//        Stream stream2 = new Random(20).ints().boxed();
         //IntStream 类提供了 range() 方法用于生成整型序列的流。编写循环时，这个方法会更加便利
         // 传统方法:
         int result = 0;
@@ -53,7 +54,28 @@ public class LambdaTest {
         }
 
         //stream中间操作:filter,distinct,limit,skip,sorted,map,flatMap等
-        //stream结束操作:allMatch,anyMatch,noneMatch,findFirst,findAny,count,reduce,collect等
+        //stream结束操作:forEach,allMatch,anyMatch,noneMatch,findFirst,findAny,count,reduce,collect等
+        list.stream().distinct()//去重
+                .limit(5)//限制5个
+                .skip(2)//跳过2个
+                .sorted((a,b)->b.length()-a.length())//排序
+                .peek(s-> {s+="S";System.out.println(s+"---");})//操作每一个元素，不消耗元素
+                .map(s -> s+"S")//对每个元素操作，会消耗元素
+//                .flatMap(?)//对每个元素操作，涉及到元素中的元素
+                .filter(s->s.startsWith("Wang"))//条件过滤
+                .forEach(System.out::println);//终结遍历
+        System.out.println("-------------------------------");
+        System.out.println(list.stream().allMatch(s->s.length()>4));//boolean
+        System.out.println(list.stream().anyMatch(s->s.startsWith("Wang")));//boolean
+        System.out.println(list.stream().findFirst().get());//optional
+        System.out.println(list.stream().findAny().get());//optional
+        System.out.println(list.stream().count());//int
+        System.out.println(list.stream().min(Comparator.comparing(String::length)).get());//optional
+        System.out.println(list.stream().reduce("name:",(a,b)->a.concat(b)));//
+        List<String> l = list.stream().filter(s->s.contains("i"))
+                .collect(Collectors.toList());//
+        l.forEach(System.out::println);
+        System.out.println("----------------------------------");
 
     }
 }
